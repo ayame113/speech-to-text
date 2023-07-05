@@ -20,6 +20,7 @@ recognition.interimResults = true; // 音声認識が途中でも出力する
 // 音声認識が行われた時の処理
 recognition.addEventListener("result", (e) => {
   currentOutputDiv ??= resultOutput.appendChild(document.createElement("div"));
+  currentOutputDiv.scrollIntoView();
 
   console.log("==========");
   let resultText = "";
